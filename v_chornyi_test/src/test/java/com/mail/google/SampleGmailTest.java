@@ -6,15 +6,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.mail.google.pages.HomePage;
+import com.mail.google.pages.GooglePage1;
 
-public class SampleTestNgTest extends TestNgTestBase {
+public class SampleGmailTest extends TestNgTestBase {
 
-  private HomePage homepage;
+  private GooglePage1 homepage;
 
   @BeforeMethod
   public void initPageObjects() {
-    homepage = PageFactory.initElements(driver, HomePage.class);
+    homepage = PageFactory.initElements(driver, GooglePage1.class);
   }
 
   @Test
