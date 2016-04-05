@@ -14,12 +14,8 @@ public abstract class p00BasePage {
    * 
    * @param webDriver
    */
-  public p00BasePage(WebDriver driver) {
+  protected p00BasePage(WebDriver driver) {
     this.driver = driver;
-  }
-
-  public String getTitle() {
-    return driver.getTitle();
   }
 
 }
