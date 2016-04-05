@@ -1,5 +1,6 @@
 package com.mail.google;
 
+import bsh.Console;
 import com.mail.google.utils.PropertyLoader;
 import com.mail.google.utils.webDriverListener;
 
@@ -30,6 +31,9 @@ public class cl01TestNgGmailTest extends cl00TestNgTestBase {
 
   @Test
   public void testGmailAuthentication() {
+    /* ********* starting our test*/
+    System.out.print("test started");
+
     addListener(new webDriverListener()); // Custom opening of WebDriver
     open(baseUrl);
 
@@ -55,6 +59,13 @@ public class cl01TestNgGmailTest extends cl00TestNgTestBase {
     // wait 20 seconds to have element appearing, otherwise failing test
     Assert.assertTrue(p03EmailPage.iconAccount.waitUntil(appears, 20000).exists(),
             "3rd page timed out - 20 seconds");
+    p03EmailPage.iconAccount.click(); // open user's menu
+    p03EmailPage.btnLogout.click(); // logout from Gmail
+
+    /****************** tests finished
+     * you can add break point here, to check debug-mode
+     */
+    System.out.print("test finished successfully");
   }
 
 
