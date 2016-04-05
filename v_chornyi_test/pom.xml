@@ -8,11 +8,9 @@
     <!-- all the plugin versions -->
     <properties>
         <testng.version>6.9.4</testng.version>
-        <webdriver-factory.version>1.1.52</webdriver-factory.version>
         <selenide.version>3.5</selenide.version>
         <allure.version>1.4.16</allure.version>
         <aspectj.version>1.8.9</aspectj.version>
-        <junit.version>4.12</junit.version>
     </properties>
 
     <!-- plugins -->
@@ -21,11 +19,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ru.stqa.selenium</groupId>
-            <artifactId>webdriver-factory</artifactId>
-            <version>${webdriver-factory.version}</version>
         </dependency>
         <dependency>
             <groupId>com.codeborne</groupId>
@@ -43,20 +36,7 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectj.version}</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
-
     <build>
         <resources>
             <resource>
@@ -99,79 +79,6 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
-            <!--
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>aspectj-maven-plugin</artifactId>
-                <version>1.7-SNAPSHOT</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <complianceLevel>1.8</complianceLevel>
-                    <showWeaveInfo>true</showWeaveInfo>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjrt</artifactId>
-                        <version>1.8.1</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjtools</artifactId>
-                        <version>1.8.1</version>
-                    </dependency>
-                </dependencies>
-            </plugin>-->
         </plugins>
     </build>
-
-    <!-- profiles -->
-    <profiles>
-        <!-- browsers -->
-        <!-- Firefox profile, default -->
-        <profile>
-            <id>firefox</id>
-            <properties>
-                <capabilities>/firefox.capabilities</capabilities>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <!--
-        <!- Google Chrome profile ->
-        <profile>
-            <id>chrome</id>
-            <properties>
-                <capabilities>/chrome.capabilities</capabilities>
-            </properties>
-        </profile>-->
-
-        <!-- environments ->
-        <!- Localhost profile, default ->
-        <profile>
-            <id>localhost</id>
-            <properties>
-                <site.url>http://localhost/</site.url>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <id>prodhost</id>
-            <properties>
-                <site.url>http://testprodhost.com/</site.url>
-            </properties>
-        </profile>
-        -->
-    </profiles>
 </project>

@@ -3,7 +3,7 @@
 <suite name="Tests" verbose="5">
   <test name="Test1">
     <classes>
-      <class name="com.mail.google.SampleGmailTest"/>
+      <class name="com.mail.google.TestNgGmailTest"/>
     </classes>
   </test>  
 </suite>

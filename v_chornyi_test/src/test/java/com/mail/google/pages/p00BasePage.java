@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 /**
  * Abstract class representation of a Page in the UI. Page object pattern
  */
-public abstract class Page {
+public abstract class p00BasePage {
 
   protected WebDriver driver;
 
@@ -14,7 +14,7 @@ public abstract class Page {
    * 
    * @param webDriver
    */
-  public Page(WebDriver driver) {
+  public p00BasePage(WebDriver driver) {
     this.driver = driver;
   }
 
