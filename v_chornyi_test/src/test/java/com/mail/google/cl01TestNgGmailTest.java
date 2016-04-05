@@ -19,17 +19,16 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.addListener;
 
 public class cl01TestNgGmailTest extends cl00TestNgTestBase {
-/*
+
   private static String gmailUsername = System.getProperty("gmail.uname", "test2888823@gmail.com");
   private static String gmailPassword = System.getProperty("gmail.pwd", "aqwe1234");
-*/
+
 
   private p01LoginPage p01LoginPage;
   private p02PasswordPage p02PasswordPage;
   private p03EmailPage p03EmailPage;
 
   @Test
-  @Parameters({ "gmail.uname", "gmail.pwd" })
   public void testGmailAuthentication() {
     addListener(new webDriverListener()); // Custom opening of WebDriver
     open(baseUrl);
