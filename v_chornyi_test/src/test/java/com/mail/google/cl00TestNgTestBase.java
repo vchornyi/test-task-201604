@@ -27,32 +27,19 @@ import com.mail.google.utils.PropertyLoader;
 /**
  * Base class for TestNG-based test classes
  */
-public class TestNgTestBase {
+public class cl00TestNgTestBase {
 
-  //protected static String baseUrl;
   protected WebDriver driver;
+  protected String gmailUsername;
+  protected String gmailPassword;
 
   @BeforeSuite
   public void initTestSuite() throws IOException {
     baseUrl = PropertyLoader.loadProperty("site.url");
-//    capabilities = PropertyLoader.loadCapabilities();
-//    WebDriverFactory.setMode(WebDriverFactoryMode.THREADLOCAL_SINGLETON);
+    gmailUsername = PropertyLoader.loadProperty("gmail.uname");
+    gmailPassword = PropertyLoader.loadProperty("gmail.pwd");
   }
 
-  @BeforeMethod
-  public void initWebDriver() {
-    //FirefoxProfile profile = createFirefoxProfile();
-//    driver = new FirefoxDriver(profile);
-//    driver = new FirefoxDriver();
-//    driver.
-  }
-
-  @AfterSuite(alwaysRun = true)
-  public void tearDown() {
-//    close();
-    //driver.quit();
-//    Reporter.log( "Driver", true );
-  }
 
   private FirefoxProfile createFirefoxProfile() {
     FirefoxProfile profile = new FirefoxProfile();

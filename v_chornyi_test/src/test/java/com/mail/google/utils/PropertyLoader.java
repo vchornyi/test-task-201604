@@ -12,10 +12,10 @@ import java.util.Properties;
  */
 public class PropertyLoader {
 
-  private static final String DEBUG_PROPERTIES = "/debug.properties";
+  private static final String CONFIG_PROPERTIES = "/config1.properties";
 
   public static Capabilities loadCapabilities() throws IOException {
-    return loadCapabilities(System.getProperty("application.properties", DEBUG_PROPERTIES));
+    return loadCapabilities(System.getProperty("application.properties", CONFIG_PROPERTIES));
   }
 
   public static Capabilities loadCapabilities(String fromResource) throws IOException {
@@ -42,7 +42,7 @@ public class PropertyLoader {
   }
 
   public static String loadProperty(String name) throws IOException {
-    return loadProperty(name, System.getProperty("application.properties", DEBUG_PROPERTIES));
+    return loadProperty(name, System.getProperty("application.properties", CONFIG_PROPERTIES));
   }
 
   public static String loadProperty(String name, String fromResource) throws IOException {
