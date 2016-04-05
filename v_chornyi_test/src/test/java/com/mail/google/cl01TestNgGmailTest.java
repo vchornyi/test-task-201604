@@ -5,7 +5,6 @@ import com.mail.google.utils.PropertyLoader;
 import com.mail.google.utils.webDriverListener;
 
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.mail.google.pages.p01LoginPage;
@@ -15,7 +14,6 @@ import com.mail.google.pages.p03EmailPage;
 import static com.codeborne.selenide.Condition.appears;
 import static com.codeborne.selenide.Configuration.*;
 
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.addListener;
 
@@ -23,7 +21,6 @@ public class cl01TestNgGmailTest extends cl00TestNgTestBase {
 
   private static String gmailUsername = System.getProperty("gmail.uname", "test2888823@gmail.com");
   private static String gmailPassword = System.getProperty("gmail.pwd", "aqwe1234");
-
 
   private p01LoginPage p01LoginPage;
   private p02PasswordPage p02PasswordPage;
@@ -67,9 +64,5 @@ public class cl01TestNgGmailTest extends cl00TestNgTestBase {
      */
     System.out.print("test finished successfully");
   }
-
-
-
-
 
 }

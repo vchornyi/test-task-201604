@@ -30,14 +30,10 @@ import com.mail.google.utils.PropertyLoader;
 public class cl00TestNgTestBase {
 
   protected WebDriver driver;
-  protected String gmailUsername;
-  protected String gmailPassword;
 
   @BeforeSuite
   public void initTestSuite() throws IOException {
     baseUrl = PropertyLoader.loadProperty("site.url");
-    gmailUsername = PropertyLoader.loadProperty("gmail.uname");
-    gmailPassword = PropertyLoader.loadProperty("gmail.pwd");
   }
 
 
